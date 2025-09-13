@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="mainContainer">
+        <h1>SkyCast</h1>
+        <h3>"Your next 5 days, forecasted"</h3>
+
+        <div class="mode-btns">
+        <button id = "lightmode"><i class="ri-sun-line"></i></button>
+        <button id = "darkmode"><i class="ri-moon-line"></i></button>
+        </div>
+
+        <div id="searchBar">
+        <input type = "text" placeholder = "Enter city's name" id = "cityname">
+        <button id = "searchBtn" onclick = "">Search</button>
+        </div>
+
+    </div>
+    <div class="herosection">
+        <div class="currentWeather">
+        <div class="weatherCard">
+            <h3 class = "cityName">City</h3>
+            <img src="" alt="WeatherIcon" class = "WeatherIcon">
+            <p class = "tempDisplay">__°C</p>
+            <p class = "condition">__C</p>
+        </div>
+        </div>
+
+        <div class="converter">
+            <button id = "degreeCelcius">°C</button>
+            <button id = "degreeFahrenheit">°F</button>
+        </div>
+
+        <h2 class = "forecastTitle">Weather forecast for the next five days</h2>
+        <div class="forecastCards">
+            <div class="forecast-card">
+                <h4>Day</h4>
+                <img src="" alt="WeatherIcon" class = "weatherIcon">
+                <p>__°C</p>
+                <p>__°F</p>
+            </div>
+            <div class="forecast-card">
+                <h4>Day</h4>
+                <img src="" alt="WeatherIcon" class = "weatherIcon">
+                <p>__°C</p>
+                <p>__°F</p>
+            </div>
+            <div class="forecast-card">
+                <h4>Day</h4>
+                <img src="" alt="WeatherIcon" class = "weatherIcon">
+                <p>__°C</p>
+                <p>__°F</p>
+            </div>
+            <div class="forecast-card">
+                <h4>Day</h4>
+                <img src="" alt="WeatherIcon" class = "weatherIcon">
+                <p>__°C</p>
+                <p>__°F</p>
+            </div>
+            <div class="forecast-card">
+                <h4>Day</h4>
+                <img src="" alt="WeatherIcon" class = "weatherIcon">
+                <p>__°C</p>
+                <p>__°F</p>
+            </div>
+        </div>
+    </div>
+    <script src = "script.js"></script>
+</body>
+</html>
