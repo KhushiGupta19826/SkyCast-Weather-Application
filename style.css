@@ -450,7 +450,7 @@ body.dark-mode.foggy-theme {
   }
 }
 
-/* Subtle animations */
+
 .weatherCard, .forecast-card {
   animation: fadeInUp 0.6s ease-out;
 }
