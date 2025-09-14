@@ -23,9 +23,6 @@ It is designed with a clean UI, dark/light mode toggle, and dynamic weather-base
 - **OpenWeatherMap API**  
 
 ---
-## Preview
-![alt text](ss1.png)
-![alt text](ss2.png)
 ## Structure
 SkyCast/
 │── index.html      # Main HTML file
@@ -36,11 +33,8 @@ SkyCast/
 ## 📌 Future Improvements
 
 🌍 Add geolocation-based auto-detection of current city
-
 📊 Add hourly weather forecast
-
 📱 Improve mobile responsiveness
-
 🔔 Add severe weather alerts
 
 
