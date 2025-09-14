@@ -1,23 +1,22 @@
 let API_KEY = "29c2b524b950dbc23b18ed9c922276b4";
 let currentWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
-// DOM Elements
+
 let searchInput = document.getElementById("cityname");
 let searchButton = document.getElementById("searchBtn");
 let darkMode = document.getElementById("darkmode");
 let lightMode = document.getElementById("lightmode");
 
-// Dark Mode
+
 darkMode.addEventListener("click", () => {
     document.body.classList.add("dark-mode");
 });
 
-// Light Mode
 lightMode.addEventListener("click", () => {
     document.body.classList.remove("dark-mode");
 });
 
-// ✅ Fetch Forecast (5 days)
+
 let fetchForecast = async (lat, lon) => {
     let forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`;
     let response = await fetch(forecastApiUrl);
@@ -47,7 +46,7 @@ let fetchForecast = async (lat, lon) => {
     }
 };
 
-// ✅ Fetch Current Weather
+
 async function fetchWeather(city) {
     let response = await fetch(currentWeatherUrl + city + `&appid=${API_KEY}`);
     let data = await response.json();
@@ -66,10 +65,10 @@ async function fetchWeather(city) {
     let iconCode = data.weather[0].icon;
     weatherImg.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
-    // Apply theme dynamically
+
     applyWeatherTheme(data.weather[0].main);
 
-    // Converter
+
     document.getElementById("degreeCelcius").addEventListener("click", () => {
         document.querySelector(".tempDisplay").innerHTML = `${temperature_value}°C`;
     });
@@ -83,7 +82,6 @@ async function fetchWeather(city) {
     await fetchForecast(data.coord.lat, data.coord.lon);
 }
 
-// ✅ Themes based on weather condition
 function applyWeatherTheme(condition) {
     document.body.classList.remove("sunny-theme", "rainy-theme", "foggy-theme", "snowy-theme", "cloudy-theme");
 
@@ -112,7 +110,7 @@ function applyWeatherTheme(condition) {
     }
 }
 
-// ✅ Search Button
+
 searchButton.addEventListener("click", async (e) => {
     e.preventDefault();
     let city = searchInput.value; // FIXED
